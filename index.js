@@ -57,6 +57,7 @@ app.get("/frase", (req, res) => {
 // ===========================================
 //  SERVIDOR
 // ===========================================
-app.listen(3001, () => {
-  console.log(" API de Frases rodando em http://localhost:3001");
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+  console.log(`✅ API rodando na porta ${port}`);
 });
